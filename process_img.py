@@ -28,7 +28,7 @@ def process_img(filename, count, temp_path):
     unit = '[ mol / m-2 ]'
 
     # This is this title of the graph that will appear below.
-    long_name = f"Tropospheric vertical column of carbon monoxide (CO) {count} \n\n {filename}"
+    long_name = f"Tropospheric vertical column of carbon monoxide (CO) {count} \n\n {filename[47:]}"
 
     # We need to know the geopgrphical extent of the data, this is contained in the raster object.
     bbox = raster.bounds
@@ -44,7 +44,7 @@ def process_img(filename, count, temp_path):
     # The latest coastline data gets downloaded here, there may be a delay the first time you run this notebook.
     ax.coastlines(resolution='10m')
     ax.gridlines()
-    ax.set_title(long_name, fontsize=20, pad=20.0, fontweight = 'bold')
+    ax.set_title(long_name, fontsize=16, pad=20.0, fontweight = 'bold')
 
     # Here we set the colour map for matplotlib. e.g. 'flag', 'prism', 'ocean', 'gist_earth', 'terrain', 'gist_stern', 'jet'
     color = cm.gist_ncar
