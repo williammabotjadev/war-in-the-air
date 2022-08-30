@@ -24,7 +24,7 @@ print(dir_len)
 for filename in os.listdir(directory):
     if count > dir_len:
         break
-    process_img(f"./data-collection/feb_data/{filename}", count, temp_path)
+    process_img(f"./data_collection/feb_data/{filename}", count, temp_path)
     count += 1
 
 
