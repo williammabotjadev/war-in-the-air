@@ -61,5 +61,5 @@ def process_img(filename, count, temp_path):
 
     plt.savefig(f"./pre_images/{temp_path}/img{count}{datef}.png")
 
-    plt.show()
+    # plt.show()
 
