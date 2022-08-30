@@ -59,7 +59,7 @@ def process_img(filename, count, temp_path):
     cbar.ax.tick_params(labelsize=14)
     datef = datetime.now().strftime("%d-%m-%y%H:%M:%S")
 
-    plt.savefig(f"./pre_images/{temp_path}/img{count}{datef}.png")
+    plt.savefig(f"./post_images/{temp_path}/img{count}{datef}.png")
 
     # plt.show()
 
