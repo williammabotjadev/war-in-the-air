@@ -1,6 +1,6 @@
 import os
 
-mydir = "./data_collection/feb_data/"
+mydir = "./data_collection/mov_data/"
 
 for f in os.listdir(mydir):
     if not f.endswith(".json"):
