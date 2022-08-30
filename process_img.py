@@ -33,7 +33,7 @@ def process_img(filename, count, temp_path):
     # We need to know the geopgrphical extent of the data, this is contained in the raster object.
     bbox = raster.bounds
     extent=[bbox[0],bbox[2],bbox[1],bbox[3]]
-    print (bbox)
+    print(bbox)
 
     # Here we set up the parameters needed to display the geographical data correctly.
     fig=plt.figure(figsize=(15, 12))
@@ -54,7 +54,7 @@ def process_img(filename, count, temp_path):
     # In the norm setting below we normalise the data so that it scales between 0 to 1
     img = plt.imshow(raster.read(1), cmap = color,extent = extent,norm=LogNorm(),transform=ccrs.PlateCarree())
 
-    cbar = fig.colorbar(img, ax=ax, orientation='horizontal', fraction=0.04, pad=0.1, vmin=0, vmin=255)
+    cbar = fig.colorbar(img, ax=ax, orientation='horizontal', pad=0.1)
     cbar.set_label(unit, fontsize=16, fontweight = 'bold')
     cbar.ax.tick_params(labelsize=14)
     datef = datetime.now().strftime("%d-%m-%y%H:%M:%S")
