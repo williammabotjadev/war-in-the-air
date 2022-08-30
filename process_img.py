@@ -52,7 +52,7 @@ def process_img(filename, count, temp_path):
     color.set_bad('white')
 
     # In the norm setting below we normalise the data so that it scales between 0 to 1
-    img = plt.imshow(raster.read(1), cmap = color,extent = extent,norm=LogNorm(),transform=ccrs.PlateCarree())
+    img = plt.imshow(raster.read(1), cmap = color,extent = extent, transform=ccrs.PlateCarree())
 
     cbar = fig.colorbar(img, ax=ax, orientation='horizontal', pad=0.1)
     cbar.set_label(unit, fontsize=16, fontweight = 'bold')
